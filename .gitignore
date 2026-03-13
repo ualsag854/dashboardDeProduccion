@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Strapi / Frontend generated
+.tmp/
+build/
+.next/
+out/
+coverage/
+
+# Propios del proyecto (Imágenes procesadas)
+.watcher_estado.json
+/tmp/
