@@ -77,7 +77,7 @@ export default factories.createCoreController('api::defect.defect', ({ strapi })
                     if (isNaN(Number(batch))) {
                         // It's a documentId
                         const results = await strapi.entityService.findMany('api::batch.batch', {
-                            filters: { documentId: batch },
+                            filters: { documentId: batch } as any,
                             limit: 1
                         });
                         if (results && results.length > 0) {
@@ -111,8 +111,8 @@ export default factories.createCoreController('api::defect.defect', ({ strapi })
                 stat: 'not reviewed',
                 // Associate the uploaded image (it's passed as an ID from the frontend)
                 image: image ? [image.toString()] : null,
-                // Link to the piece
-                pieces: pieceEntity ? [pieceEntity.id] : [],
+                // Link to the piece using documentId (Strapi 5 requirement for relations)
+                pieces: pieceEntity ? [pieceEntity.documentId || pieceEntity.id] : [],
                 publishedAt: new Date(),
             };
 

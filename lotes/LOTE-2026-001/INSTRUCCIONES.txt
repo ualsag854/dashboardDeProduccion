@@ -1,0 +1,12 @@
+LOTE: LOTE-2026-001 (ID Strapi: 1)
+Fecha creación: 2026-03-13T15:26:10.493Z
+
+INSTRUCCIONES:
+  1. Coloca en esta carpeta las fotos de las placas de este lote.
+  2. El watcher detectará automáticamente las nuevas imágenes.
+  3. El análisis CIELAB se ejecutará y los resultados se subirán a Strapi.
+
+Formatos aceptados: .jpg, .jpeg, .png
+
+Carpeta de patrones maestros: lotes/_maestras/
+  (Asegúrate de tener al menos 1 imagen de referencia ahí)
